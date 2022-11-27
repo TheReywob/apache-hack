@@ -18,8 +18,7 @@ if ($result->num_rows == 0){
 }
 // Check if password matches
 if ($password_check === $password) {
-  //header("location:home.php");
-  echo "success";
+  header("location:main_page.php");
 } else {
   $error = TRUE;
 }
