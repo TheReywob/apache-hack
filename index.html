@@ -1,12 +1,40 @@
-<html>
-  <h1>Log In</h1>
-  <form action="check_login.php" method="post">
-    <label for="username">Username: </label>
-    <input type="username" id="username" name="username" required>
-    <br>
-    <label for="password">Password: </label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <input type="submit" value="Log In">
-  </form>
-</html>
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="login.php" method="post">
+        <div class="imgcontainer">
+            <img src="logo.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <BR>
+            <label for="password"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" value="Log In">Login</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot 
+                <a href="one.html">password?</a>
+            </span>
+        </div>
+    </form>
+
+</body>
+
+<footer id="footer">
+    <p>Brian Evans, Connor Bowyer, Taylen Schmaltz</p>
+    <p> CSI 4480</p>
+</footer>
