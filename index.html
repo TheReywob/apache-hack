@@ -6,17 +6,17 @@
 
 <body>
 
-    <form action="login.php" method="post">
+    <form action="check_login.php" method="post">
         <div class="imgcontainer">
             <img src="logo.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label for="username"><b>Username:</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="username"><b>Username: </b></label>
+            <input type="text" placeholder="Enter Username" id="username" name="username" required>
             <BR>
-            <label for="password"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="password"><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" id="password" name="password" required>
 
             <button type="submit" value="Log In">Login</button>
             <label>
@@ -26,9 +26,6 @@
 
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot 
-                <a href="one.html">password?</a>
-            </span>
         </div>
     </form>
 
