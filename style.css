@@ -18,7 +18,7 @@ input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(179, 155, 155);
     box-sizing: border-box;
 }
 
@@ -70,7 +70,7 @@ img.avatar {
 
 /* Add padding to containers */
 
-.container {
+.indexcontainer {
     padding: 16px;
 }
 
@@ -88,5 +88,200 @@ span.psw {
     margin: auto;
     display: block;
     text-align: center;
-    color: darkgray;
+    color: #555;
+}
+
+
+/* NAV BAR STYLE START BELOW */
+
+
+/* NAV BAR STYLE START BELOW */
+
+
+/* Create a top navigation bar with a black background color  */
+
+.topnav {
+    margin: 20px;
+    background-color: #383838;
+    overflow: hidden;
+    box-shadow: 0 8px 8px 0 #50505033;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #4c8ce0;
+    color: black;
+}
+
+
+/* Create a right-aligned (split) link inside the navigation bar */
+
+.topnav a.split {
+    float: right;
+    background-color: #4c8ce0;
+    color: white;
+}
+
+
+/* Three columns side by side */
+
+.column {
+    float: left;
+    width: 33.3%;
+    height: auto;
+}
+
+
+/* Add some shadows to create a card effect */
+
+.card {
+    margin: 21px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 #50505033;
+}
+
+
+/* Some left and right padding inside the container */
+
+.container {
+    text-align: center;
+    padding: 0 46px;
+}
+
+
+/* Clear floats */
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: rgb(78, 78, 78);
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #4c8ce0;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+
+/* Month header */
+
+.month {
+    padding: 20px 25px;
+    background: #1abc9c;
+    text-align: center;
+}
+
+
+/* Month list */
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+/* Previous button inside month header */
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+
+/* Next button */
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+
+/* Weekdays (Mon-Sun) */
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 14px;
+    ;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 10.5%;
+    color: #666;
+    text-align: center;
+}
+
+
+/* Days (1-31) */
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.1%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* Highlight the "current" day */
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
 }
