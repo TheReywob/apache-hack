@@ -6,28 +6,22 @@
 
 <body>
 
-    <form action="signin.html" method="post">
+    <form action="check_login.php" method="post">
         <div class="imgcontainer">
             <img src="logo.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="indexcontainer">
-            <label for="username"><b>Username:</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="username"><b>Username: </b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
             <BR>
-            <label for="password"><b>Password:</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="password"><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
             <button type="submit" value="Log In">Login</button>
-            <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
         </div>
 
         <div class="indexcontainer" style="background-color:#383838">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw" style="color:white">Forgot 
-                <a href="one.html" style="color:white">password?</a>
-            </span>
+            <button type="reset" class="cancelbtn">Cancel</button>
         </div>
     </form>
 
