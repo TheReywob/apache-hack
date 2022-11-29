@@ -16,7 +16,7 @@ if ($result->num_rows == 0){
 } else {
   while ($row = $result->fetch_assoc()){
     $password_check = $row['password'];
-    $id = $row['userId'];
+    $id = $row['id'];
   }
 }
 // Check if password matches
