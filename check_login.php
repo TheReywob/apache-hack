@@ -22,7 +22,7 @@ if ($result->num_rows == 0){
 // Check if password matches
 if ($password_check === $password) {
   // Set session variables
-  $_SESSION['user'] = $username;
+  $_SESSION['username'] = $username;
   $_SESSION['userId'] = $id;
   header("location:main_page.php");
 } else {
