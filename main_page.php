@@ -13,11 +13,9 @@
 <body>
     <!-- The navigation menu -->
     <div class="topnav">
-        <a href="#">Home</a>
-        <a href="#">News</a>
-        <a href="#">Contacts</a>
-        <a href="#">Settings</a>
-        <a href="#" class="split">Sign Out</a>
+        <a href="main_page.php">Home</a>
+        <a href="settings.php">Settings</a>
+        <a href="signout.php" class="split">Sign Out</a>
     </div>
 
 
@@ -30,14 +28,16 @@
                 </div>
             </div>
         </div>
+      </div>
 
+      <div class="row">
         <div class="column">
             <div class="card">
                 <div class="container">
                     <h2>Whats New</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>Nothing</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">Here's what's new.</p>
+                    <p>Some description text.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
@@ -46,9 +46,9 @@
             <div class="card">
                 <div class="container">
                     <h2>Data Virtualization</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>lorem ipsum ipsum lorem.</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">Very important data!</p>
+                    <p>Description about data.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
@@ -57,20 +57,22 @@
             <div class="card">
                 <div class="container">
                     <h2>Leadership</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>lorem ipsum ipsum lorem.</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">We're lead by the best.</p>
+                    <p>Description about our leadership.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
+      </div>
 
+      <div class="row">
         <div class="column">
             <div class="card">
                 <div class="container">
                     <h2>Announcements</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>lorem ipsum ipsum lorem.</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">Important announcements here!</p>
+                    <p>Check out these recent announcements.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
@@ -79,9 +81,9 @@
             <div class="card">
                 <div class="container">
                     <h2>Employee Spotlight</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>lorem ipsum ipsum lorem.</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">EOTM</p>
+                    <p>The best of the best.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
@@ -90,13 +92,12 @@
             <div class="card">
                 <div class="container">
                     <h2>Appointments</h2>
-                    <p class="title">Item Title Here</p>
-                    <p>lorem ipsum ipsum lorem.</p>
-                    <p><button class="button">Start</button></p>
+                    <p class="title">Got an appointment?</p>
+                    <p>See more details here.</p>
+                    <p><button class="button">See More</button></p>
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>
