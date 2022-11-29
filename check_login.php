@@ -2,6 +2,8 @@
 
 // Open connection to the database
 require "connect.php";
+// Start a session
+session_start();
 // Store the username and password inputs as variables
 $username = $_REQUEST['username'];
 $password = $_REQUEST['password'];
@@ -14,10 +16,14 @@ if ($result->num_rows == 0){
 } else {
   while ($row = $result->fetch_assoc()){
     $password_check = $row['password'];
+    $id = $row['userId'];
   }
 }
 // Check if password matches
 if ($password_check === $password) {
+  // Set session variables
+  $_SESSION['user'] = $username;
+  $_SESSION['userId'] = $id;
   header("location:main_page.php");
 } else {
   $error = TRUE;
