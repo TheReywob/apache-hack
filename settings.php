@@ -155,6 +155,7 @@ $result = $connect->query($sql);
       }
        ?>
 
+       <input type="submit" value="Save Changes" style="font-size: 30px; background-color: #4CAF50; border-radius: 4px;">
     </form>
   </div>
 
