@@ -21,11 +21,14 @@ $result = $connect->query($sql);
     $current_pw = $row['password'];
     $current_fn = $row['firstName'];
     $current_ln = $row['lastName'];
+    $current_ut = $row['userType'];
+    $current_ad = $row['isAdmin'];
+    $current_pc = $row['paycheck'];
+    $current_ti = $row['taxID'];
     $current_st = $row['street'];
     $current_ct = $row['city'];
     $current_zp = $row['zip'];
   }
-
   for ($i = 0; $i < strlen($current_pw); $i++) {
     $hidden_pw .= "*";
   }
@@ -130,6 +133,28 @@ $result = $connect->query($sql);
           <p>Current ZIP Code: <?php echo $current_zp; ?></p>
         </div>
       </div>
+
+      <?php
+      // If user is an Admin, print the admin menu
+      if ($current_ad == 1) {
+        echo '<hr><h2>Admin Section</h2><div class="row"><div class="column">';
+        echo '<label for="userType"><b>User Type: '.$current_ut.'</b></label>';
+        echo '</div></div><br>';
+
+        echo '<div class="row"><div class="column">';
+        echo '<label for="isAdmin"><b>isAdmin: '.$current_ad.'</b></label>';
+        echo '</div></div><br>';
+
+        echo '<div class="row"><div class="column">';
+        echo '<label for="paycheck"><b>Paycheck Amount: '.$current_pc.'</b></label>';
+        echo '</div></div><br>';
+
+        echo '<div class="row"><div class="column">';
+        echo '<label for="taxid"><b>TaxID: '.$current_ti.'</b></label>';
+        echo '</div></div><br>';
+      }
+       ?>
+
     </form>
   </div>
 
