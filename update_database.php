@@ -4,6 +4,14 @@ require "connect.php";
 
 $id = $_SESSION['userId'];
 
+// Check if admin switched users
+$incomingId = $_POST['user'];
+if ($incomingId != $id) {
+  $_SESSION['userId'] = $incomingId;
+}
+
+$id = $_SESSION['userId'];
+
 // Import variables from the form
 $new_un = $_POST['username'];
 $new_pw = $_POST['password'];
