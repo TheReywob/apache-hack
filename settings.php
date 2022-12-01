@@ -14,7 +14,7 @@ require "connect.php";
 
 $id = $_SESSION['userId'];
 
-$sql = "select * from users where id = '$id'";
+$sql = "SELECT * FROM users WHERE id = '$id'";
 $result = $connect->query($sql);
   while ($row = $result->fetch_assoc()){
     $current_un = $row['username'];
@@ -137,25 +137,40 @@ $result = $connect->query($sql);
       <?php
       // If user is an Admin, print the admin menu
       if ($current_ad == 1) {
-        echo '<hr><h2>Admin Section</h2><div class="row"><div class="column">';
-        echo '<label for="userType"><b>User Type: '.$current_ut.'</b></label>';
+        if ($current_ut == 0) {
+          $userType = "employee";
+        } else {
+          $userType = "customer";
+        }
+        echo '<hr><h1>Admin Section</h1><div class="row"><div class="column">';
+        echo '<label for="userType">User Type: <b>'.$current_ut.'</b></label>';
         echo '</div></div><br>';
 
         echo '<div class="row"><div class="column">';
-        echo '<label for="isAdmin"><b>isAdmin: '.$current_ad.'</b></label>';
+        echo '<label for="isAdmin">isAdmin: <b>yes</b></label>';
         echo '</div></div><br>';
 
         echo '<div class="row"><div class="column">';
-        echo '<label for="paycheck"><b>Paycheck Amount: '.$current_pc.'</b></label>';
+        echo '<label for="paycheck">Paycheck Amount: <b>$'.$current_pc.'</b></label>';
         echo '</div></div><br>';
 
         echo '<div class="row"><div class="column">';
-        echo '<label for="taxid"><b>TaxID: '.$current_ti.'</b></label>';
+        echo '<label for="taxid">TaxID: <b>'.$current_ti.'</b></label>';
         echo '</div></div><br>';
+
+        echo '<h2>Edit Different User</h2>';
+        echo '<select name="user">';
+        $sql_drop = "SELECT id, username FROM users";
+        $result_drop = $connect->query($sql_drop);
+        while ($row_drop = $result_drop->fetch_assoc()){
+          // Add every username to a dropdown menu
+          echo '<option value="'.$row_drop['id'].'">'.$row_drop['username'].'</option>';
+        }
+        echo '</select><br><br>';
       }
        ?>
 
-       <input type="submit" value="Save Changes" style="font-size: 30px; background-color: #4CAF50; border-radius: 4px;">
+       <input type="submit" value="Confirm" style="font-size: 30px; background-color: #4CAF50; border-radius: 4px;">
     </form>
   </div>
 
