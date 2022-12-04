@@ -5,9 +5,16 @@ require "connect.php";
 $id = $_SESSION['userId'];
 
 // Check if admin switched users
-$incomingId = $_POST['user'];
-if ($incomingId != $id) {
-  $_SESSION['userId'] = $incomingId;
+$sql = "SELECT isAdmin from users where id = '$id'";
+$result = $connect->query($sql);
+while ($row = $result->fetch_assoc()){
+  $adminCheck = $row['isAdmin'];
+}
+if ($adminCheck == 1) {
+  $incomingId = $_POST['user'];
+  if ($incomingId != $id) {
+    $_SESSION['userId'] = $incomingId;
+  }
 }
 
 $id = $_SESSION['userId'];
@@ -74,9 +81,9 @@ if ($new_zp == "") {
 // Sample SQL injection: (', paycheck='999.99)
 
 // SQL update statement
-$sql = "UPDATE users SET username='$updated_un', password='$updated_pw', firstName='$updated_fn', lastName='$updated_ln', street='$updated_st', city='$updated_ct', zip='$updated_zp' WHERE id='$id'";
+$sql_update = "UPDATE users SET username='$updated_un', password='$updated_pw', firstName='$updated_fn', lastName='$updated_ln', street='$updated_st', city='$updated_ct', zip='$updated_zp' WHERE id='$id'";
 // Verify the update statement was successful
-if ($connect->query($sql) === TRUE) {
+if ($connect->query($sql_update) === TRUE) {
   header("Location: settings.php");
   exit();
 } else {
